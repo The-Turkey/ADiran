@@ -12,14 +12,14 @@ public class Interactions : MonoBehaviour
     public GameObject yellowBall; //declaring the yellow ball object
     public GameObject redBall; //declaring the yellow ball object
     public bool RedYellowBall = true; // the boolean that decided whether a yellow or a red ball falls down(true means red)
-    public bool buttonState = true;
+    public bool buttonState = true;//boolean to determine whether or not the button can be clicked
 
     ButtonClick a;
 
     // Start is called before the first frame updates
     void Start()
     {
-        a = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonClick>();
+        a = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonClick>();//declared the animation script
     }
 
     // Update is called once per frame
@@ -54,19 +54,19 @@ public class Interactions : MonoBehaviour
                 {
                     if (RedYellowBall == true)
                     {
-                        a.PressButton();
+                        a.PressButton();//calls in the animation script for the button
                         Instantiate(redBall);//creates red ball
                         RedYellowBall = false;// next turn is yellow ball
-                        buttonState = false;
-                        Invoke("enableButton", 2.0f);
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
                     else
                     {
-                        a.PressButton();
+                        a.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall);//creates yellow ball
                         RedYellowBall = true;//next turn is red ball
-                        buttonState = false;
-                        Invoke("enableButton", 2.0f);
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
 
                     buttonClickTimes = buttonClickTimes + 1;//button has now been clicked one more time
