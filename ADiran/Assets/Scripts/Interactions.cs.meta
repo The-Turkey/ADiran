@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 180024e0fb617ca43b0f78bc8f357fdb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fpsCam: {instanceID: 0}
+  - yellowBall: {fileID: 3289642075155071718, guid: 7f4318f5492dcea4d9fd581111b0f66e, type: 3}
+  - redBall: {fileID: 6783897169424967576, guid: 5eb382712a734154dbeccb22568a472a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
