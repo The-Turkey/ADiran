@@ -6,6 +6,8 @@ public class RedWinCheck : MonoBehaviour
 {
     public GameObject RedBall;
 
+    public bool hasCollided = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +19,34 @@ public class RedWinCheck : MonoBehaviour
     {
         
     }
-    RaycastHit2D[] goodHits(RaycastHit2D[] hits) { }
+    
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("red ball goes boing");
-        RaycastHit2D[] Hits = goodHits(Physics2D.RaycastAll(RedBall.transform.position, RedBall.transform.up, 4f));
+        if (hasCollided == false) 
+        {
+            Debug.Log("red ball goes boing");
+            hasCollided = true;
+        }
+
+
+        RaycastHit hit;
+
+        float winCheckRange = 4f;
+
+        /*if(Physics2D.RaycastAll(RedBall.transform.position, RedBall.transform.forward, winCheckRange))
+        {
+            Debug.Log(hit.transform.name);
+
+            if (hit.transform.gameObject.CompareTag("RedBall"))
+            {
+                Debug.Log("ball hit");
+            }
+
+
+        }*/
+
+
     }
 
 }
