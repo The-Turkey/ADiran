@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class YellowWinCheck : MonoBehaviour
 {
+    public bool hasCollided = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,10 @@ public class YellowWinCheck : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("yellow ball goes boing");
+        if (hasCollided == false)
+        {
+            //Debug.Log("yellow ball goes boing");
+            hasCollided = true;
+        }
     }
 }

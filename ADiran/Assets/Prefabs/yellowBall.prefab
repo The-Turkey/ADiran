@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3168891789684324977}
   m_Layer: 0
   m_Name: yellowBall
-  m_TagString: Untagged
+  m_TagString: YellowBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada04f920706acb4c9bc606dde99c991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCollided: 0
 --- !u!65 &3168891789684324977
 BoxCollider:
   m_ObjectHideFlags: 0
