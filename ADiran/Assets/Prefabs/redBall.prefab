@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6811714023490789382}
   - component: {fileID: -2311453257968201848}
   - component: {fileID: 6176649334031188654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: redBall
   m_TagString: RedBall
   m_Icon: {fileID: 0}
@@ -141,3 +141,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedBall: {fileID: 6783897169424967576}
   hasCollided: 0
+  hasRaycast: 0

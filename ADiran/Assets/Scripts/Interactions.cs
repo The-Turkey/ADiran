@@ -56,7 +56,7 @@ public class Interactions : MonoBehaviour
                     {
                         a.PressButton();//calls in the animation script for the button
                         Instantiate(redBall);//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        //RedYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -64,7 +64,7 @@ public class Interactions : MonoBehaviour
                     {
                         a.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall);//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        //RedYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }

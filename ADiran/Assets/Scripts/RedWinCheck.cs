@@ -7,7 +7,6 @@ public class RedWinCheck : MonoBehaviour
     public GameObject RedBall;
 
     public bool hasCollided = false;
-    public bool hasRaycast = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,18 +23,35 @@ public class RedWinCheck : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (hasCollided == false) 
+
+        float winCheckRange = 4f;
+
+        int layerMask = 1 << 8;
+
+        
+
+        
+
+        if (!hasCollided)
         {
-            //Debug.Log("red ball goes boing");
-            hasCollided = true;
+            RaycastHit[] hits;
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), winCheckRange, layerMask);
+
+
+            if (hits.Length >= 5)
+            {
+                Debug.Log("red win");
+            }
+
+            hits = null;
+            
         }
+        hasCollided = true;
 
 
-        RaycastHit hit;
 
-        float winCheckRange = 10f;
-
-        if(Physics.Raycast(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), out hit, winCheckRange))
+        /*if(Physics.Raycast(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), out hit, winCheckRange))
         {
             //Debug.Log(hit.transform.name);
 
@@ -53,7 +69,7 @@ public class RedWinCheck : MonoBehaviour
                 hasRaycast = true;
             }
 
-        }
+        }*/
 
 
     }
