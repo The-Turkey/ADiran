@@ -41,7 +41,7 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask)) //takes the position of the camera and outputs a ray
             {
-                Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
+                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
 
                 /*if (hit.transform.gameObject.CompareTag("Button"))
                 {

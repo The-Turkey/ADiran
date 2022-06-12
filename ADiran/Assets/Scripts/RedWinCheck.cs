@@ -24,9 +24,9 @@ public class RedWinCheck : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        float winCheckRange = 4f;
+        float winCheckRange = 3f;//declares the range of the raycast
 
-        int layerMask = 1 << 8;
+        int layerMask = 1 << 8;//means the raycast is only able to hit the red balls 
 
         
 
@@ -34,22 +34,23 @@ public class RedWinCheck : MonoBehaviour
 
         if (!hasCollided)
         {
-            RaycastHit[] hits;
+            Debug.Log("ball has collided with something");
+            
+            RaycastHit[] hits;//creates an array for whatever the raycast collides with
 
-            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), winCheckRange, layerMask);
+            hits = null;//empties the array 
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), winCheckRange, layerMask); //shoots a ray downwards and puts whatever the raycast collides with into the array
 
 
-            if (hits.Length >= 5)
+            if (hits.Length >= 5)//when the array has collided with 5 things (one ball counts as two collisions)
             {
-                Debug.Log("red win");
+                Debug.Log("red win");//red has won
             }
 
-            hits = null;
-            
+            hasCollided = true;//means this script only runs once to reduce lag 
+
         }
-        hasCollided = true;
-
-
 
         /*if(Physics.Raycast(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), out hit, winCheckRange))
         {
@@ -70,7 +71,6 @@ public class RedWinCheck : MonoBehaviour
             }
 
         }*/
-
 
     }
 
