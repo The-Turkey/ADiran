@@ -7,6 +7,7 @@ TagManager:
   - Button
   - RedBall
   - YellowBall
+  - button 7
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Button 1
   - redBall
   - yellowBall
-  - 
+  - Button 7
   - 
   - 
   - 
