@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class YellowWinCheck : MonoBehaviour
 {
+
+    public GameObject YellowBall;
     public bool hasCollided = false;
 
     // Start is called before the first frame update

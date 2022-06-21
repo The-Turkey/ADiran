@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16586
+  m_Name: pb_Mesh16576
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 270753769}
   - component: {fileID: 270753768}
   m_Layer: 10
-  m_Name: Cylinder
+  m_Name: Cylinder7
   m_TagString: button 7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 270753766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b6a148849661e2428d5c80db4ac0b68, type: 3}
+  m_Script: {fileID: 11500000, guid: 0073ba301b151a3469524161ee51eac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PressAnim: {fileID: 270753768}
@@ -3116,7 +3116,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16528
+  m_Name: pb_Mesh16504
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3280,7 +3280,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16550
+  m_Name: pb_Mesh16526
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6500,7 +6500,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6422
+  m_Name: pb_Mesh16484
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6701,14 +6701,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180024e0fb617ca43b0f78bc8f357fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRange: 3
+  interactionRange: 10
   fpsCam: {fileID: 991323435}
-  ButtonClicked: 0
-  buttonClickTimes: 0
   yellowBall: {fileID: 3289642075155071718, guid: 7f4318f5492dcea4d9fd581111b0f66e, type: 3}
   redBall: {fileID: 6783897169424967576, guid: 5eb382712a734154dbeccb22568a472a, type: 3}
-  RedYellowBall: 1
-  buttonState: 1
+  redBall_7: {fileID: 1772159758019714194, guid: d3c7cdb1124c448419ffaf58d2d13a7a, type: 3}
+  yellowBall_7: {fileID: 3538164444576700719, guid: 51b6dfbfad3d52f43bca5e99c501ce11, type: 3}
 --- !u!1 &1162140534
 GameObject:
   m_ObjectHideFlags: 0
@@ -6773,7 +6771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211010706
 GameObject:
@@ -7641,7 +7639,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6424
+  m_Name: pb_Mesh16562
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7893,7 +7891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 228027751806234682, guid: d50ae24c8fdd55548b71fde77e41a12c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 228027751806234682, guid: d50ae24c8fdd55548b71fde77e41a12c, type: 3}
       propertyPath: m_AnchorMax.x

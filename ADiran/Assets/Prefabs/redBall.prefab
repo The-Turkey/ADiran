@@ -141,4 +141,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedBall: {fileID: 6783897169424967576}
   hasCollided: 0
-  hasRaycast: 0

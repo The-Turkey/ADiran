@@ -7,6 +7,7 @@ MonoImporter:
   - fpsCam: {instanceID: 0}
   - yellowBall: {fileID: 3289642075155071718, guid: 7f4318f5492dcea4d9fd581111b0f66e, type: 3}
   - redBall: {fileID: 6783897169424967576, guid: 5eb382712a734154dbeccb22568a472a, type: 3}
+  - redBall_7: {fileID: 1772159758019714194, guid: d3c7cdb1124c448419ffaf58d2d13a7a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

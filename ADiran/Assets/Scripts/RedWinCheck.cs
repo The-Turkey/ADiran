@@ -43,12 +43,12 @@ public class RedWinCheck : MonoBehaviour
             hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), winCheckRange, layerMask); //shoots a ray downwards and puts whatever the raycast collides with into the array
 
 
-            if (hits.Length >= 5)//when the array has collided with 5 things (one ball counts as two collisions)
+            if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
                 Debug.Log("red win");//red has won
             }
 
-            hasCollided = true;//means this script only runs once to reduce lag 
+            hasCollided = true;//means this script only runs once to reduce lag and to prevent bugs and errors
 
         }
 
