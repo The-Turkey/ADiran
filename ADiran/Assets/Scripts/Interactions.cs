@@ -6,7 +6,6 @@ public class Interactions : MonoBehaviour
 {
     public float interactionRange = 3f;//how far out the ray goes
     public Camera fpsCam; //declaring the camera
-    private bool ButtonClicked = false; //declaring whenther or not the button has been clicked
     private int buttonClickTimes;
 
     public GameObject yellowBall; //declaring the yellow ball object
@@ -51,13 +50,6 @@ public class Interactions : MonoBehaviour
             {
                 //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
 
-                /*if (hit.transform.gameObject.CompareTag("Button"))
-                {
-                    a.PressButton();
-                }*/
-
-
-
                 if (buttonClickTimes < 6)//if button has been clicked less than 7 times
                 {
                     if (RedYellowBall == true)
@@ -84,13 +76,6 @@ public class Interactions : MonoBehaviour
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_7)) //takes the position of the camera and outputs a ray
             {
                 //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
-
-                /*if (hit.transform.gameObject.CompareTag("Button"))
-                {
-                    a.PressButton();
-                }*/
-
-
 
                 if (buttonClickTimes_7 < 6)//if button has been clicked less than 7 times
                 {

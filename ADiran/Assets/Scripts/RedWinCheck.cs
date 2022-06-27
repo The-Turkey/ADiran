@@ -42,6 +42,59 @@ public class RedWinCheck : MonoBehaviour
 
             hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), winCheckRange, layerMask); //shoots a ray downwards and puts whatever the raycast collides with into the array
 
+            if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+            {
+                Debug.Log("red win");//red has won
+            }
+
+            hits = null;//clear array
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.left), winCheckRange, layerMask); //shoots a ray left and puts whatever the raycast collides with into the array
+
+            if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+            {
+                Debug.Log("red win");//red has won
+            }
+
+            hits = null;//clear array
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.right), winCheckRange, layerMask); //shoots a ray right and puts whatever the raycast collides with into the array
+
+            if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+            {
+                Debug.Log("red win");//red has won
+            }
+
+            hits = null;//clear array
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(1f,1f,0f), 4.24f, layerMask); //shoots a ray diagonally up right and puts whatever the raycast collides with into the array
+
+            if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+            {
+                Debug.Log("red win");//red has won
+            }
+
+            hits = null;//clear array
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(-1f, 1f, 0f), 4.24f, layerMask); //shoots a ray diagonally up left and puts whatever the raycast collides with into the array
+
+            if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+            {
+                Debug.Log("red win");//red has won
+            }
+
+            hits = null;//clear array
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(1f, -1f, 0f), 4.24f, layerMask); //shoots a ray diagonally down right and puts whatever the raycast collides with into the array
+
+            if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+            {
+                Debug.Log("red win");//red has won
+            }
+
+            hits = null;//clear array
+
+            hits = Physics.RaycastAll(RedBall.transform.position, RedBall.transform.TransformDirection(-1f, -1f, 0f), 4.24f, layerMask); //shoots a ray diagonally down left and puts whatever the raycast collides with into the array
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
@@ -52,25 +105,7 @@ public class RedWinCheck : MonoBehaviour
 
         }
 
-        /*if(Physics.Raycast(RedBall.transform.position, RedBall.transform.TransformDirection(Vector3.down), out hit, winCheckRange))
-        {
-            //Debug.Log(hit.transform.name);
-
-            if (!hasRaycast)
-            {
-                if (hit.transform.gameObject.CompareTag("YellowBall"))
-                {
-                    Debug.Log("yellow ball hit");
-                }
-                else if (hit.transform.gameObject.CompareTag("RedBall"))
-                {
-                    Debug.Log("red ball hit");
-                }
-
-                hasRaycast = true;
-            }
-
-        }*/
+       
 
     }
 
