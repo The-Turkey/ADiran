@@ -6,23 +6,29 @@ public class Interactions : MonoBehaviour
 {
     public float interactionRange = 3f;//how far out the ray goes
     public Camera fpsCam; //declaring the camera
-    private int buttonClickTimes;
 
     public GameObject yellowBall; //declaring the yellow ball object
     public GameObject redBall; //declaring the red ball object
     private bool RedYellowBall = true; // the boolean that decided whether a yellow or a red ball falls down(true means red)
     private bool buttonState = true;//boolean to determine whether or not the button can be clicked
 
+    private int buttonClickTimes;
+    private int buttonClickTimes_2;
+    private int buttonClickTimes_3;
+    private int buttonClickTimes_4;
+    private int buttonClickTimes_5;
+    private int buttonClickTimes_6;
     private int buttonClickTimes_7;
 
     ButtonClick Button1;
-    ButtonClick7 Button2;
+
+    ButtonClick7 Button7;
 
     // Start is called before the first frame updates
     void Start()
     {
         Button1 = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonClick>();//declared the animation script
-        Button2 = GameObject.FindGameObjectWithTag("button 7").GetComponent<ButtonClick7>();//declared the animation script for the button in column 7
+        Button7 = GameObject.FindGameObjectWithTag("button 7").GetComponent<ButtonClick7>();//declared the animation script for the button in column 7
     }
 
     // Update is called once per frame
@@ -41,6 +47,12 @@ public class Interactions : MonoBehaviour
     {
         int layerMask = 1 << 7;//makes it so the raycast only detects the button
         int layerMask_7 = 1 << 10;
+        int layerMask_2 = 1 << 11;
+        int layerMask_3 = 1 << 12;
+        int layerMask_4 = 1 << 13;
+        int layerMask_5 = 1 << 14;
+        int layerMask_6 = 1 << 15;
+
         RaycastHit hit;
 
         if (buttonState == true)
@@ -81,7 +93,7 @@ public class Interactions : MonoBehaviour
                 {
                     if (RedYellowBall == true)
                     {
-                        Button2.PressButton();//calls in the animation script for the button
+                        Button7.PressButton();//calls in the animation script for the button
                         Instantiate(redBall, new Vector3(6f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
                         RedYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
@@ -89,7 +101,7 @@ public class Interactions : MonoBehaviour
                     }
                     else
                     {
-                        Button2.PressButton();//calls in the animation script for the button
+                        Button7.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall, new Vector3(6f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
                         RedYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button

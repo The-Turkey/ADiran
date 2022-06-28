@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada04f920706acb4c9bc606dde99c991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  YellowBall: {fileID: 3289642075155071718}
   hasCollided: 0
 --- !u!65 &3168891789684324977
 BoxCollider:
