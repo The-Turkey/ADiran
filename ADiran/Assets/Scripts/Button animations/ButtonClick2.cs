@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonClick : MonoBehaviour
+public class ButtonClick2 : MonoBehaviour
 {
     public Animator PressAnim;
 
@@ -17,10 +17,9 @@ public class ButtonClick : MonoBehaviour
     {
         
     }
-
     public void PressButton()
     {
-        StartCoroutine(PressingAnim());   
+        StartCoroutine(PressingAnim());
     }
 
     IEnumerator PressingAnim()
@@ -30,4 +29,5 @@ public class ButtonClick : MonoBehaviour
         PressAnim.SetBool("Pressing", false);
 
     }
+
 }
