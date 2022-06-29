@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonClick4 : MonoBehaviour
+public class ButtonClick5 : MonoBehaviour
 {
     public Animator PressAnim;
     // Start is called before the first frame update

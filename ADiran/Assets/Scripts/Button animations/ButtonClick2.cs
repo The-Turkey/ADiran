@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ButtonClick2 : MonoBehaviour
 {
+    //declares animation script
     public Animator PressAnim;
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class ButtonClick2 : MonoBehaviour
         StartCoroutine(PressingAnim());
     }
 
+    //starts the animation
     IEnumerator PressingAnim()
     {
         PressAnim.SetBool("Pressing", true);

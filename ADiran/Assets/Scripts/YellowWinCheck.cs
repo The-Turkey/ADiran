@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class YellowWinCheck : MonoBehaviour
 {
 
     public GameObject YellowBall;
     public bool hasCollided = false;
+    
+    [SerializeField] Image YellowWinPanel;
+    bool hasWon;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +49,7 @@ public class YellowWinCheck : MonoBehaviour
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
                 Debug.Log("yellow win");//yellow has won
+                YellowWinPanel.enabled = true;
             }
 
             hits = null;//clear array

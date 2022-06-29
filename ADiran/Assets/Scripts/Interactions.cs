@@ -22,21 +22,22 @@ public class Interactions : MonoBehaviour
 
     ButtonClick Button1;
     ButtonClick2 Button2;
-    //ButtonClick3 Button3;
-    //ButtonClick4 Button4;
-    //ButtonClick5 Button5;
-    //ButtonClick6 Button6;
+    ButtonClick3 Button3;
+    ButtonClick4 Button4;
+    ButtonClick5 Button5;
+    ButtonClick6 Button6;
     ButtonClick7 Button7;
+
 
     // Start is called before the first frame updates
     void Start()
     {
         Button1 = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonClick>();//declared the animation script
         Button2 = GameObject.FindGameObjectWithTag("Button 2").GetComponent<ButtonClick2>();
-        //Button3 = GameObject.FindGameObjectWithTag("button 3").GetComponent<ButtonClick3>();
-        //Button4 = GameObject.FindGameObjectWithTag("button 4").GetComponent<ButtonClick4>();
-        //Button5 = GameObject.FindGameObjectWithTag("button 5").GetComponent<ButtonClick5>();
-        //Button6 = GameObject.FindGameObjectWithTag("button 6").GetComponent<ButtonClick6>();
+        Button3 = GameObject.FindGameObjectWithTag("Button 3").GetComponent<ButtonClick3>();
+        Button4 = GameObject.FindGameObjectWithTag("Button 4").GetComponent<ButtonClick4>();
+        Button5 = GameObject.FindGameObjectWithTag("Button 5").GetComponent<ButtonClick5>();
+        Button6 = GameObject.FindGameObjectWithTag("Button 6").GetComponent<ButtonClick6>();
         Button7 = GameObject.FindGameObjectWithTag("button 7").GetComponent<ButtonClick7>();//declared the animation script for the button in column 7
     }
 
@@ -118,6 +119,114 @@ public class Interactions : MonoBehaviour
                     }
 
                     buttonClickTimes_2 = buttonClickTimes_2 + 1;//button has now been clicked one more time
+                }
+            }
+
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_3)) //takes the position of the camera and outputs a ray
+            {
+                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
+
+                if (buttonClickTimes_3 < 6)//if button has been clicked less than 7 times
+                {
+                    if (RedYellowBall == true)
+                    {
+                        Button3.PressButton();//calls in the animation script for the button
+                        Instantiate(redBall, new Vector3(2f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
+                        RedYellowBall = false;// next turn is yellow ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+                    else
+                    {
+                        Button3.PressButton();//calls in the animation script for the button
+                        Instantiate(yellowBall, new Vector3(2f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
+                        RedYellowBall = true;//next turn is red ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+
+                    buttonClickTimes_3 = buttonClickTimes_3 + 1;//button has now been clicked one more time
+                }
+            }
+
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_4)) //takes the position of the camera and outputs a ray
+            {
+                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
+
+                if (buttonClickTimes_4 < 6)//if button has been clicked less than 7 times
+                {
+                    if (RedYellowBall == true)
+                    {
+                        Button4.PressButton();//calls in the animation script for the button
+                        Instantiate(redBall, new Vector3(3f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
+                        RedYellowBall = false;// next turn is yellow ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+                    else
+                    {
+                        Button4.PressButton();//calls in the animation script for the button
+                        Instantiate(yellowBall, new Vector3(3f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
+                        RedYellowBall = true;//next turn is red ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+
+                    buttonClickTimes_4 = buttonClickTimes_4 + 1;//button has now been clicked one more time
+                }
+            }
+
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_5)) //takes the position of the camera and outputs a ray
+            {
+                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
+
+                if (buttonClickTimes_5 < 6)//if button has been clicked less than 7 times
+                {
+                    if (RedYellowBall == true)
+                    {
+                        Button5.PressButton();//calls in the animation script for the button
+                        Instantiate(redBall, new Vector3(4f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
+                        RedYellowBall = false;// next turn is yellow ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+                    else
+                    {
+                        Button5.PressButton();//calls in the animation script for the button
+                        Instantiate(yellowBall, new Vector3(4f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
+                        RedYellowBall = true;//next turn is red ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+
+                    buttonClickTimes_5 = buttonClickTimes_5 + 1;//button has now been clicked one more time
+                }
+            }
+
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_6)) //takes the position of the camera and outputs a ray
+            {
+                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
+
+                if (buttonClickTimes_6 < 6)//if button has been clicked less than 7 times
+                {
+                    if (RedYellowBall == true)
+                    {
+                        Button6.PressButton();//calls in the animation script for the button
+                        Instantiate(redBall, new Vector3(5f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
+                        RedYellowBall = false;// next turn is yellow ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+                    else
+                    {
+                        Button6.PressButton();//calls in the animation script for the button
+                        Instantiate(yellowBall, new Vector3(5f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
+                        RedYellowBall = true;//next turn is red ball
+                        buttonState = false;//disables button
+                        Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
+                    }
+
+                    buttonClickTimes_6 = buttonClickTimes_6 + 1;//button has now been clicked one more time
                 }
             }
 

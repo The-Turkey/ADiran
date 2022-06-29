@@ -17,4 +17,16 @@ public class ButtonClick3 : MonoBehaviour
     {
         
     }
+    public void PressButton()
+    {
+        StartCoroutine(PressingAnim());
+    }
+
+    IEnumerator PressingAnim()
+    {
+        PressAnim.SetBool("Pressing", true);
+        yield return new WaitForSeconds(1f);
+        PressAnim.SetBool("Pressing", false);
+
+    }
 }
