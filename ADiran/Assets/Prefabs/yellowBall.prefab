@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   YellowBall: {fileID: 3289642075155071718}
   hasCollided: 0
+  YellowWinPanel: {fileID: 4863059194564159647, guid: 678fa241f3902dc4fbf1559f5c1dd75f, type: 3}
 --- !u!65 &3168891789684324977
 BoxCollider:
   m_ObjectHideFlags: 0

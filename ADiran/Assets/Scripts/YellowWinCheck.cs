@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class YellowWinCheck : MonoBehaviour
 {
 
     public GameObject YellowBall;
     public bool hasCollided = false;
-    
-    [SerializeField] Image YellowWinPanel;
-    bool hasWon;
+
+    public GameObject YellowWinPanel;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        YellowWinPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,8 +48,7 @@ public class YellowWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("yellow win");//yellow has won
-                YellowWinPanel.enabled = true;
+                yellowWin();
             }
 
             hits = null;//clear array
@@ -58,7 +57,7 @@ public class YellowWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("yellow win");//yellow has won
+                yellowWin();
             }
 
             hits = null;//clear array
@@ -67,7 +66,7 @@ public class YellowWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("yellow win");//yellow has won
+                yellowWin();
             }
 
             hits = null;//clear array
@@ -76,7 +75,7 @@ public class YellowWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("yellow win");//yellow has won
+                yellowWin();
             }
 
             hits = null;//clear array
@@ -85,7 +84,7 @@ public class YellowWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("yellow win");//yellow has won
+                yellowWin();
             }
 
             hits = null;//clear array
@@ -94,7 +93,7 @@ public class YellowWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("yellow win");//yellow has won
+                yellowWin();
             }
 
             hits = null;//clear array
@@ -103,7 +102,7 @@ public class YellowWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("yellow win");//yellow has won
+                yellowWin();
             }
 
             hasCollided = true;//means this script only runs once to reduce lag and to prevent bugs and errors
@@ -112,6 +111,13 @@ public class YellowWinCheck : MonoBehaviour
 
 
 
+    }
+    void yellowWin()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log("yellow win");//yellow has won
+        YellowWinPanel.SetActive(true);
+        SceneManager.LoadScene("Yellowwinscene");
     }
 
 }
