@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RedWinCheck : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class RedWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("red win");//red has won
+                redWin();
             }
 
             hits = null;//clear array
@@ -53,7 +54,7 @@ public class RedWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("red win");//red has won
+                redWin();
             }
 
             hits = null;//clear array
@@ -62,7 +63,7 @@ public class RedWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("red win");//red has won
+                redWin();
             }
 
             hits = null;//clear array
@@ -71,7 +72,7 @@ public class RedWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("red win");//red has won
+                redWin();
             }
 
             hits = null;//clear array
@@ -80,7 +81,7 @@ public class RedWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("red win");//red has won
+                redWin();
             }
 
             hits = null;//clear array
@@ -89,7 +90,7 @@ public class RedWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("red win");//red has won
+                redWin();
             }
 
             hits = null;//clear array
@@ -98,7 +99,7 @@ public class RedWinCheck : MonoBehaviour
 
             if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
             {
-                Debug.Log("red win");//red has won
+                redWin();
             }
 
             hasCollided = true;//means this script only runs once to reduce lag and to prevent bugs and errors
@@ -109,4 +110,10 @@ public class RedWinCheck : MonoBehaviour
 
     }
 
+    void redWin()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log("red win");//red has won
+        SceneManager.LoadScene("redwinscene");
+    }
 }
