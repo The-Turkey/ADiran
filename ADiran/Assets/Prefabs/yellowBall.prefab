@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3289642075155071712}
   - component: {fileID: 3289642075155071719}
   - component: {fileID: 5400727493516667645}
-  - component: {fileID: 3168891789684324977}
   m_Layer: 9
   m_Name: yellowBall
   m_TagString: YellowBall
@@ -96,7 +95,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.501
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3289642075155071719
 Rigidbody:
@@ -128,17 +127,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   YellowBall: {fileID: 3289642075155071718}
   hasCollided: 0
-  YellowWinPanel: {fileID: 4863059194564159647, guid: 678fa241f3902dc4fbf1559f5c1dd75f, type: 3}
---- !u!65 &3168891789684324977
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3289642075155071718}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

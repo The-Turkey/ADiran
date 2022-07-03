@@ -48,7 +48,7 @@ public class Interactions : MonoBehaviour
         {
             Interaction();
         }
-
+        //buttonState = true;
         
 
     }

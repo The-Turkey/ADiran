@@ -9,6 +9,7 @@ public class YellowWinCheck : MonoBehaviour
 
     public GameObject YellowBall;
     public bool hasCollided = false;
+    int winTimes = 0;
     
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class YellowWinCheck : MonoBehaviour
         winConditions();
     }
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
 
 
@@ -37,17 +38,11 @@ public class YellowWinCheck : MonoBehaviour
 
 
 
-    }
-    void yellowWin()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Debug.Log("yellow win");//yellow has won
-        SceneManager.LoadScene("Yellowwinscene");
-    }
+    }*/
 
     void winConditions()
     {
-        float winCheckRange = 3f;//declares the range of the raycast
+        float winCheckRange = 3.1f;//declares the range of the raycast
 
         int layerMask = 1 << 9;//means the raycast is only able to hit the yellow balls 
 
@@ -57,64 +52,85 @@ public class YellowWinCheck : MonoBehaviour
 
         hits = Physics.RaycastAll(YellowBall.transform.position, YellowBall.transform.TransformDirection(Vector3.down), winCheckRange, layerMask); //shoots a ray downwards and puts whatever the raycast collides with into the array
 
-        if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+        if (hits.Length >= 3)//when the array has collided with 3 or more yellow balls yellow wins 
         {
             yellowWin();
+            Debug.Log("yellow down win");
         }
 
         hits = null;//clear array
 
         hits = Physics.RaycastAll(YellowBall.transform.position, YellowBall.transform.TransformDirection(Vector3.left), winCheckRange, layerMask); //shoots a ray left and puts whatever the raycast collides with into the array
 
-        if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+        if (hits.Length >= 3)//when the array has collided with 3 or more yellow balls yellow wins 
         {
             yellowWin();
+            Debug.Log("yellow left win");
         }
 
         hits = null;//clear array
 
         hits = Physics.RaycastAll(YellowBall.transform.position, YellowBall.transform.TransformDirection(Vector3.right), winCheckRange, layerMask); //shoots a ray right and puts whatever the raycast collides with into the array
 
-        if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+        if (hits.Length >= 3)//when the array has collided with 3 or more yellow balls yellow wins 
         {
             yellowWin();
+            Debug.Log("yellow right win");
         }
 
         hits = null;//clear array
 
         hits = Physics.RaycastAll(YellowBall.transform.position, YellowBall.transform.TransformDirection(1f, 1f, 0f), 4.24f, layerMask); //shoots a ray diagonally up right and puts whatever the raycast collides with into the array
 
-        if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+        if (hits.Length >= 3)//when the array has collided with 3 or more yellow balls yellow wins 
         {
             yellowWin();
+            Debug.Log("yellow up right win");
         }
 
         hits = null;//clear array
 
         hits = Physics.RaycastAll(YellowBall.transform.position, YellowBall.transform.TransformDirection(-1f, 1f, 0f), 4.24f, layerMask); //shoots a ray diagonally up left and puts whatever the raycast collides with into the array
 
-        if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+        if (hits.Length >= 3)//when the array has collided with 3 or more yellow balls yellow wins 
         {
             yellowWin();
+            Debug.Log("yellow up left win");
         }
 
         hits = null;//clear array
 
         hits = Physics.RaycastAll(YellowBall.transform.position, YellowBall.transform.TransformDirection(1f, -1f, 0f), 4.24f, layerMask); //shoots a ray diagonally down right and puts whatever the raycast collides with into the array
 
-        if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+        if (hits.Length >= 3)//when the array has collided with 3 or more yellow balls yellow wins 
         {
             yellowWin();
+            Debug.Log("yellow down right win");
         }
 
         hits = null;//clear array
 
         hits = Physics.RaycastAll(YellowBall.transform.position, YellowBall.transform.TransformDirection(-1f, -1f, 0f), 4.24f, layerMask); //shoots a ray diagonally down left and puts whatever the raycast collides with into the array
 
-        if (hits.Length >= 5)//when the array has collided with 5 or more things (one ball counts as two collisions)
+        if (hits.Length >= 3)//when the array has collided with 3 or more yellow balls yellow wins 
         {
             yellowWin();
+            Debug.Log("yellow down left win");
         }
+        hits = null;
+    }
+
+    void yellowWin()
+    {
+        
+        winTimes = winTimes + 1;
+        if (winTimes > 25)
+        {
+            Debug.Log("YELLOW WIN");
+            Cursor.lockState = CursorLockMode.None;//unlocks the cursor
+        }
+        //Debug.Log("yellow win");//yellow has won
+        //SceneManager.LoadScene("Yellowwinscene");
     }
 
     IEnumerator winCheck()
