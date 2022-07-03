@@ -128,15 +128,10 @@ public class YellowWinCheck : MonoBehaviour
         {
             Debug.Log("YELLOW WIN");
             Cursor.lockState = CursorLockMode.None;//unlocks the cursor
+            //SceneManager.LoadScene("Yellowwinscene");
         }
         //Debug.Log("yellow win");//yellow has won
-        //SceneManager.LoadScene("Yellowwinscene");
     }
 
-    IEnumerator winCheck()
-    {
-        yield return new WaitForSeconds(1f);
-        Debug.Log("second raycasts");
-        winConditions();
-    }
+
 }

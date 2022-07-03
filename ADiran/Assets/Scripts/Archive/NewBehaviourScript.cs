@@ -42,3 +42,26 @@ public class NewBehaviourScript : MonoBehaviour
 {
     a.PressButton();
 }*/
+
+/*IEnumerator winCheck()
+{
+    yield return new WaitForSeconds(1f);
+    Debug.Log("second raycasts");
+    winConditions();
+}*/
+
+/*void OnTriggerEnter(Collider other)
+{
+
+
+    if (!hasCollided)
+    {
+
+
+        hasCollided = true;//means this script only runs once to reduce lag and to prevent bugs and errors
+
+    }
+
+
+
+}*/
