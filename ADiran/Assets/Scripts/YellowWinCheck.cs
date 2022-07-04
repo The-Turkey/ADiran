@@ -24,22 +24,6 @@ public class YellowWinCheck : MonoBehaviour
         winConditions();
     }
 
-    /*void OnTriggerEnter(Collider other)
-    {
-
-
-        if (!hasCollided)
-        {
-            Debug.Log("ball has collided with something");
-            winConditions();
-            hasCollided = true;//means this script only runs once to reduce lag and to prevent bugs and errors
-
-        }
-
-
-
-    }*/
-
     void winConditions()
     {
         float winCheckRange = 3.1f;//declares the range of the raycast
@@ -120,6 +104,7 @@ public class YellowWinCheck : MonoBehaviour
         hits = null;
     }
 
+    //when yellow wins, change scenes and unlock the cursor
     void yellowWin()
     {
         
@@ -127,10 +112,9 @@ public class YellowWinCheck : MonoBehaviour
         if (winTimes > 25)
         {
             Debug.Log("YELLOW WIN");
-            Cursor.lockState = CursorLockMode.None;//unlocks the cursor
-            //SceneManager.LoadScene("Yellowwinscene");
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("Yellowwinscene");
         }
-        //Debug.Log("yellow win");//yellow has won
     }
 
 
