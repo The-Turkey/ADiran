@@ -105,7 +105,7 @@ public class RedWinCheck : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Debug.Log("red win");//red has won
-            //SceneManager.LoadScene("redwinscene");
+            SceneManager.LoadScene("redwinscene");
         }
     }
 }

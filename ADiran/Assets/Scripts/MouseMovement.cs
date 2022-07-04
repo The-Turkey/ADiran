@@ -17,7 +17,6 @@ public class MouseMovement : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; //makes the cursor so it is locked into the centre of the camera
-        GetComponent<Interactions>();
     }
 
     // Update is called once per frame

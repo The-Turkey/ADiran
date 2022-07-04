@@ -12,7 +12,8 @@ public class Interactions : MonoBehaviour
     private bool RedYellowBall = true; // the boolean that decided whether a yellow or a red ball falls down(true means red)
     private bool buttonState = true;//boolean to determine whether or not the button can be clicked
 
-    private int buttonClickTimes; //int for how many times button has been clicked
+    //int for how many times each button has been clicked
+    private int buttonClickTimes; 
     private int buttonClickTimes_2;
     private int buttonClickTimes_3;
     private int buttonClickTimes_4;
@@ -20,6 +21,7 @@ public class Interactions : MonoBehaviour
     private int buttonClickTimes_6;
     private int buttonClickTimes_7;
 
+    //animation variables
     ButtonClick Button1;
     ButtonClick2 Button2;
     ButtonClick3 Button3;
@@ -32,13 +34,14 @@ public class Interactions : MonoBehaviour
     // Start is called before the first frame updates
     void Start()
     {
-        Button1 = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonClick>();//declared the animation script
+        //declared the animation script for all the buttons
+        Button1 = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonClick>();
         Button2 = GameObject.FindGameObjectWithTag("Button 2").GetComponent<ButtonClick2>();
         Button3 = GameObject.FindGameObjectWithTag("Button 3").GetComponent<ButtonClick3>();
         Button4 = GameObject.FindGameObjectWithTag("Button 4").GetComponent<ButtonClick4>();
         Button5 = GameObject.FindGameObjectWithTag("Button 5").GetComponent<ButtonClick5>();
         Button6 = GameObject.FindGameObjectWithTag("Button 6").GetComponent<ButtonClick6>();
-        Button7 = GameObject.FindGameObjectWithTag("button 7").GetComponent<ButtonClick7>();//declared the animation script for the button in column 7
+        Button7 = GameObject.FindGameObjectWithTag("button 7").GetComponent<ButtonClick7>();
     }
 
     // Update is called once per frame
@@ -47,15 +50,14 @@ public class Interactions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0)) //when click left mouse button
         {
             Interaction();
-        }
-        //buttonState = true;
-        
+        }        
 
     }
 
     void Interaction()
     {
-        int layerMask = 1 << 7;//makes it so the raycast only detects the button
+        //makes it so the raycast only detects the button
+        int layerMask = 1 << 7;
         int layerMask_7 = 1 << 10;
         int layerMask_2 = 1 << 11;
         int layerMask_3 = 1 << 12;
@@ -70,7 +72,6 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask)) //takes the position of the camera and outputs a ray
             {
-                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
 
                 if (buttonClickTimes < 6)//if button has been clicked less than 7 times
                 {
@@ -97,7 +98,6 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_2)) //takes the position of the camera and outputs a ray
             {
-                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
 
                 if (buttonClickTimes_2 < 6)//if button has been clicked less than 7 times
                 {
@@ -124,7 +124,6 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_3)) //takes the position of the camera and outputs a ray
             {
-                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
 
                 if (buttonClickTimes_3 < 6)//if button has been clicked less than 7 times
                 {
@@ -151,8 +150,6 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_4)) //takes the position of the camera and outputs a ray
             {
-                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
-
                 if (buttonClickTimes_4 < 6)//if button has been clicked less than 7 times
                 {
                     if (RedYellowBall == true)
@@ -178,8 +175,6 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_5)) //takes the position of the camera and outputs a ray
             {
-                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
-
                 if (buttonClickTimes_5 < 6)//if button has been clicked less than 7 times
                 {
                     if (RedYellowBall == true)
@@ -205,8 +200,6 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_6)) //takes the position of the camera and outputs a ray
             {
-                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
-
                 if (buttonClickTimes_6 < 6)//if button has been clicked less than 7 times
                 {
                     if (RedYellowBall == true)
@@ -232,8 +225,6 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_7)) //takes the position of the camera and outputs a ray
             {
-                //Debug.Log(hit.transform.name); //outputs what object has been hit onto the console
-
                 if (buttonClickTimes_7 < 6)//if button has been clicked less than 7 times
                 {
                     if (RedYellowBall == true)
