@@ -30,6 +30,8 @@ public class Interactions : MonoBehaviour
     ButtonClick6 Button6;
     ButtonClick7 Button7;
 
+    //creating variable for turn indicator
+    turnIndicator turn;
 
     // Start is called before the first frame updates
     void Start()
@@ -42,6 +44,9 @@ public class Interactions : MonoBehaviour
         Button5 = GameObject.FindGameObjectWithTag("Button 5").GetComponent<ButtonClick5>();
         Button6 = GameObject.FindGameObjectWithTag("Button 6").GetComponent<ButtonClick6>();
         Button7 = GameObject.FindGameObjectWithTag("button 7").GetComponent<ButtonClick7>();
+
+        //declaring the turn indicator script
+        turn = GameObject.FindGameObjectWithTag("TurnIndicator").GetComponent<turnIndicator>();
     }
 
     // Update is called once per frame
@@ -75,6 +80,8 @@ public class Interactions : MonoBehaviour
 
                 if (buttonClickTimes < 6)//if button has been clicked less than 7 times
                 {
+                    turn.turnChange();
+
                     if (RedYellowBall == true)
                     {
                         Button1.PressButton();//calls in the animation script for the button
@@ -98,6 +105,7 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_2)) //takes the position of the camera and outputs a ray
             {
+                turn.turnChange();
 
                 if (buttonClickTimes_2 < 6)//if button has been clicked less than 7 times
                 {
@@ -124,6 +132,7 @@ public class Interactions : MonoBehaviour
 
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, interactionRange, layerMask_3)) //takes the position of the camera and outputs a ray
             {
+                turn.turnChange();
 
                 if (buttonClickTimes_3 < 6)//if button has been clicked less than 7 times
                 {
@@ -152,6 +161,8 @@ public class Interactions : MonoBehaviour
             {
                 if (buttonClickTimes_4 < 6)//if button has been clicked less than 7 times
                 {
+                    turn.turnChange();
+
                     if (RedYellowBall == true)
                     {
                         Button4.PressButton();//calls in the animation script for the button
@@ -177,6 +188,8 @@ public class Interactions : MonoBehaviour
             {
                 if (buttonClickTimes_5 < 6)//if button has been clicked less than 7 times
                 {
+                    turn.turnChange();
+
                     if (RedYellowBall == true)
                     {
                         Button5.PressButton();//calls in the animation script for the button
@@ -202,6 +215,8 @@ public class Interactions : MonoBehaviour
             {
                 if (buttonClickTimes_6 < 6)//if button has been clicked less than 7 times
                 {
+                    turn.turnChange();
+
                     if (RedYellowBall == true)
                     {
                         Button6.PressButton();//calls in the animation script for the button
@@ -227,6 +242,8 @@ public class Interactions : MonoBehaviour
             {
                 if (buttonClickTimes_7 < 6)//if button has been clicked less than 7 times
                 {
+                    turn.turnChange();
+
                     if (RedYellowBall == true)
                     {
                         Button7.PressButton();//calls in the animation script for the button

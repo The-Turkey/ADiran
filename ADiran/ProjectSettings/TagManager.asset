@@ -13,6 +13,7 @@ TagManager:
   - Button 4
   - Button 5
   - Button 6
+  - TurnIndicator
   layers:
   - Default
   - TransparentFX

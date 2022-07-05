@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,10 +11,12 @@ public class RedWinCheck : MonoBehaviour
 
     int winTimes;
 
+    turnIndicator turn;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        turn = GameObject.FindGameObjectWithTag("TurnIndicator").GetComponent<turnIndicator>();
     }
 
     // Update is called once per frame
@@ -105,6 +107,7 @@ public class RedWinCheck : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Debug.Log("red win");//red has won
+            turn.turnChange();
             SceneManager.LoadScene("redwinscene");
         }
     }

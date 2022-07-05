@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class YellowWinCheck : MonoBehaviour
 {
-
     public GameObject YellowBall;
+
     public bool hasCollided = false;
+
     int winTimes = 0;
-    
+
+    turnIndicator turn;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        turn = GameObject.FindGameObjectWithTag("TurnIndicator").GetComponent<turnIndicator>();
     }
 
     // Update is called once per frame
@@ -113,6 +114,7 @@ public class YellowWinCheck : MonoBehaviour
         {
             Debug.Log("YELLOW WIN");
             Cursor.lockState = CursorLockMode.None;
+            turn.turnChange();
             SceneManager.LoadScene("Yellowwinscene");
         }
     }
