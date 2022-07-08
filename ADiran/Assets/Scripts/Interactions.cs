@@ -9,7 +9,7 @@ public class Interactions : MonoBehaviour
 
     public GameObject yellowBall; //declaring the yellow ball object
     public GameObject redBall; //declaring the red ball object
-    private bool RedYellowBall = true; // the boolean that decided whether a yellow or a red ball falls down(true means red)
+    private bool redYellowBall = true; // the boolean that decided whether a yellow or a red ball falls down(true means red)
     private bool buttonState = true;//boolean to determine whether or not the button can be clicked
 
     //int for how many times each button has been clicked
@@ -82,11 +82,11 @@ public class Interactions : MonoBehaviour
                 {
                     turn.turnChange();
 
-                    if (RedYellowBall == true)
+                    if (redYellowBall == true)
                     {
                         Button1.PressButton();//calls in the animation script for the button
                         Instantiate(redBall);//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        redYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -94,7 +94,7 @@ public class Interactions : MonoBehaviour
                     {
                         Button1.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall);//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        redYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -109,11 +109,11 @@ public class Interactions : MonoBehaviour
 
                 if (buttonClickTimes_2 < 6)//if button has been clicked less than 7 times
                 {
-                    if (RedYellowBall == true)
+                    if (redYellowBall == true)
                     {
                         Button2.PressButton();//calls in the animation script for the button
                         Instantiate(redBall, new Vector3(1f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        redYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -121,7 +121,7 @@ public class Interactions : MonoBehaviour
                     {
                         Button2.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall, new Vector3(1f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        redYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -136,11 +136,11 @@ public class Interactions : MonoBehaviour
 
                 if (buttonClickTimes_3 < 6)//if button has been clicked less than 7 times
                 {
-                    if (RedYellowBall == true)
+                    if (redYellowBall == true)
                     {
                         Button3.PressButton();//calls in the animation script for the button
                         Instantiate(redBall, new Vector3(2f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        redYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -148,7 +148,7 @@ public class Interactions : MonoBehaviour
                     {
                         Button3.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall, new Vector3(2f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        redYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -163,11 +163,11 @@ public class Interactions : MonoBehaviour
                 {
                     turn.turnChange();
 
-                    if (RedYellowBall == true)
+                    if (redYellowBall == true)
                     {
                         Button4.PressButton();//calls in the animation script for the button
                         Instantiate(redBall, new Vector3(3f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        redYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -175,7 +175,7 @@ public class Interactions : MonoBehaviour
                     {
                         Button4.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall, new Vector3(3f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        redYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -190,11 +190,11 @@ public class Interactions : MonoBehaviour
                 {
                     turn.turnChange();
 
-                    if (RedYellowBall == true)
+                    if (redYellowBall == true)
                     {
                         Button5.PressButton();//calls in the animation script for the button
                         Instantiate(redBall, new Vector3(4f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        redYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -202,7 +202,7 @@ public class Interactions : MonoBehaviour
                     {
                         Button5.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall, new Vector3(4f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        redYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -217,11 +217,11 @@ public class Interactions : MonoBehaviour
                 {
                     turn.turnChange();
 
-                    if (RedYellowBall == true)
+                    if (redYellowBall == true)
                     {
                         Button6.PressButton();//calls in the animation script for the button
                         Instantiate(redBall, new Vector3(5f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        redYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -229,7 +229,7 @@ public class Interactions : MonoBehaviour
                     {
                         Button6.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall, new Vector3(5f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        redYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -244,11 +244,11 @@ public class Interactions : MonoBehaviour
                 {
                     turn.turnChange();
 
-                    if (RedYellowBall == true)
+                    if (redYellowBall == true)
                     {
                         Button7.PressButton();//calls in the animation script for the button
                         Instantiate(redBall, new Vector3(6f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates red ball
-                        RedYellowBall = false;// next turn is yellow ball
+                        redYellowBall = false;// next turn is yellow ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
@@ -256,7 +256,7 @@ public class Interactions : MonoBehaviour
                     {
                         Button7.PressButton();//calls in the animation script for the button
                         Instantiate(yellowBall, new Vector3(6f, 10f, 10f), Quaternion.Euler(0f, 0f, 0f));//creates yellow ball
-                        RedYellowBall = true;//next turn is red ball
+                        redYellowBall = true;//next turn is red ball
                         buttonState = false;//disables button
                         Invoke("enableButton", 2.0f);// after 2 seconds, re-enable button
                     }
